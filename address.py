@@ -8,7 +8,7 @@ class Address:
         return f"{self.__street}, {self.__number}, {self.__city}"
 
     def __repr__(self):
-        return f"address(street = {self.__street}, number = {self.__number}, city = {self.__city}"
+        return f"{self.__street}, {self.__number}, {self.__city}"
 
     def get_street(self):
         return self.__street
@@ -24,4 +24,3 @@ class Address:
 
     def set_city(self, city):
         self.__city = city
-        

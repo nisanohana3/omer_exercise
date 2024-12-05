@@ -2,27 +2,27 @@ class Manage:
     def __init__(self, company_name, address, employees):
         self.__company_name = company_name
         self._address = address
-        self.employees = employees if employees is not None else []
+        self.employees = employees if employees else []
 
-     def __str__(self):
-         return f"Manage :{self.__company_name}, {self.address}"
+    def __str__(self):
+        return f"Manage :{self.__company_name}, {self._address}"
 
     def __repr__(self):
-        return f"company(company_name = {self.__company_name},address = {self._address}, emplyees ={self.employees})"
+        return f"Manage :{self.__company_name}, {self._address}"
 
-    def employee_add(self, employee):
+    def add_employee(self, employee):
         if employee not in self.employees:
             self.employees.append(employee)
-            return  True
+            return True
         return False
 
-    def employee_remove(self, employee):
+    def remove_employee(self, employee):
         if employee in self.employees:
             self.employees.remove(employee)
             return True
         return False
 
-    def employee_print(self):
+    def print_employee(self):
         if self.employees:
             print("employees:")
             for employee in self.employees:
