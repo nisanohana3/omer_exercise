@@ -29,3 +29,9 @@ class Manage:
                 print(employee)
         else:
             print("no employees in the company")
+
+    def get_company_name(self):
+        return self.__company_name
+
+    def get_address(self):
+        return self._address

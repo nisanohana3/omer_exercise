@@ -53,3 +53,21 @@ class Employee:
 
     def get_e_id(self):
         return self._e_id
+
+    def get_firstname(self):
+        return self._firstname
+
+    def get_lastname(self):
+        return self._lastname
+
+    def get_email(self):
+        return self._email
+
+    def get_address(self):
+        return self._address
+
+    def get_phone_number(self):
+        return self._phone_number
+
+    def get_gender(self):
+        return self._gender
