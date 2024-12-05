@@ -5,10 +5,10 @@ class Manage:
         self.employees = employees if employees else []
 
     def __str__(self):
-        return f"Manage :{self.__company_name}, {self._address}"
+        return f"Manage:{self.__company_name}, {self._address}"
 
     def __repr__(self):
-        return f"Manage :{self.__company_name}, {self._address}"
+        return f"Manage:{self.__company_name}, {self._address}"
 
     def add_employee(self, employee):
         if employee not in self.employees:

@@ -13,6 +13,7 @@ def get_company_data():
         reader = csv.reader(file)
 
         # Read the first line for company details
+        next(reader)
         company_details = next(reader)
 
         company_name = company_details[0]
@@ -33,6 +34,7 @@ def get_company_data():
 
         # Read the employee details and create Employee objects
         for row in reader:
+            print(row)
             # e_id, firstname, lastname, street, number, city, phone_number, gender = row
             e_id = row[0]
             firstname = row[1]
@@ -59,7 +61,7 @@ def get_company_data():
         return manage_obj
 
 
-def save_company_data(manage: Manage):
+def save_company_data(manage):
     file_name = "company_saved.csv"
 
     with open(file_name, mode="w", newline="") as file:
@@ -98,34 +100,35 @@ def save_company_data(manage: Manage):
             )
 
 
-def print_company(manage: Manage):
-    company_name = manage.get_company_name()
-    print(f"Company name: {company_name}")
+def print_company(manage):
+    print(manage)
 
 
-def print_employees(manage: Manage):
+def print_employees(manage):
     manage.print_employee()
 
 
-def add_new_employee(manage: Manage):
+def add_new_employee(manage):
     extra_employee = Employee(
         e_id="007",
         firstname="James",
         lastname="Bond",
         address=Address("MI6", "007", "London"),
         phone_number="050-2345678",
+        gender="M",
     )
 
     manage.add_employee(extra_employee)
 
 
-def remove_employee(manage: Manage):
+def remove_employee(manage):
     extra_employee = Employee(
         e_id="007",
         firstname="James",
         lastname="Bond",
         address=Address("MI6", "007", "London"),
         phone_number="050-2345678",
+        gender="M",
     )
 
     manage.remove_employee(extra_employee)
