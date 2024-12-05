@@ -34,8 +34,6 @@ def get_company_data():
 
         # Read the employee details and create Employee objects
         for row in reader:
-            print(row)
-            # e_id, firstname, lastname, street, number, city, phone_number, gender = row
             e_id = row[0]
             firstname = row[1]
             lastname = row[2]
