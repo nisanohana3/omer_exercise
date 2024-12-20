@@ -240,7 +240,7 @@ def add_new_employee(manage):
 
 def remove_employee(manage):
     delete_employee = input(
-        f"enter the id of the employee you want to delete from the employee list:"
+        "enter the id of the employee you want to delete from the employee list:"
     )
     success = manage.remove_employee(delete_employee)
     if success is False:
