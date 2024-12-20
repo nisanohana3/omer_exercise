@@ -1,6 +1,4 @@
-
 class Person:
-
     def __init__(self, e_id, firstname, lastname, address, phone_number, gender):
         self._e_id = e_id
         self._firstname = firstname
@@ -13,12 +11,12 @@ class Person:
     @staticmethod
     def _validate_phone(phone_number):
         if (
-                isinstance(phone_number, str)
-                and phone_number.startswith("05")
-                and len(phone_number) == 11
-                and phone_number[3] == "-"
-                and phone_number[0:2].isdigit()
-                and phone_number[4:].isdigit()
+            isinstance(phone_number, str)
+            and phone_number.startswith("05")
+            and len(phone_number) == 11
+            and phone_number[3] == "-"
+            and phone_number[0:2].isdigit()
+            and phone_number[4:].isdigit()
         ):
             return phone_number
 
@@ -72,9 +70,3 @@ class Person:
 
     def get_gender(self):
         return self._gender
-
-
-
-
-
-
