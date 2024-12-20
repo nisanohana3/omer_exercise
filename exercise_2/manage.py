@@ -35,3 +35,10 @@ class Manage:
 
     def get_address(self):
         return self._address
+
+    def __getitem__(self, e_id):
+        for employee in self.employees:
+            if employee.get_e_id() == e_id:
+                return employee
+
+        return None

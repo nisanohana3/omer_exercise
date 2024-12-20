@@ -56,3 +56,6 @@ class Salesperson(Employee):
     def __mod__(self, sales_number):
         if isinstance(sales_number, int):
             return (self.__current_sales // sales_number) * 100
+
+    def get_sales_target(self):
+        return self.__sales_target
